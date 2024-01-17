@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy Academy</title>
+    <link rel="stylesheet" href="AnatomyAcademy.css">
+    <script src="https://kit.fontawesome.com/de88bd0ce9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap"
+    rel="stylesheet"/>
+
+</head>
+
+<body>
+    <nav class="navbar">                             <!--navigation bar is like the menu header at the top of a webpage-->               
+        <div class="navbar__container">                 <!--container of navigation bar that serves like the body/content of the navigation bar-->               
+            <a href="/" id="navbar__logo"><i class="fa-solid fa-dumbbell"></i>VIGOROMETRY</a>               <!--a href makes a link. link has the Identifcation as "navbar__logo". fa-solid gets a logo pic from fontawesome. type Virogrometry next to it. -->
+            <div class="navbar__toggle" id="mobile-menu">       <!--IDs are unique identifiers that can be called in javascript file. class= can be used for styling in CSS file.-->
+                                                                 <!--toggle just means the switching state from one thing to another. So this here below is the implementation of what the toggle looks like-->
+                <span class="bar"></span>                   <!--hamburger icon with 3 bars for toggle button-->
+                <span class="bar"></span>
+                <span class="bar"></span>                  
+            </div>
+            <ul class="navbar__menu">                   <!--initializes an unordered list for the menu--> 
+                <li class="navbar__item">               <!--lists items of menu-->
+                    <a href="/home.html" class="navbar__links"> The Hub </a>    <!-- link for Home (which is basically the index.html file) (if not implemented yet you put a href="/")-->
+                </li>
+                <li class="navbar__item">       <!--creates class item (of the menu), so now we implement what it is below-->
+                    <a href="/home.html" class="navbar__links"> Anatomy Academy </a>    <!--navigation link for exercises/muscle diagram (html file)-->
+                </li>
+                <li class="navbar__item">
+                    <a href="/home.html" class="navbar__links"> Training Chamber </a>   <!--workout scheduler--> 
+                </li>
+                <li class="navbar__item">
+                    <a href="/home.html" class="navbar__links"> Adventure's Progress </a>   <!--progress tracker--> 
+                </li>
+                <li class="navbar__item">
+                    <a href="/home.html" class="navbar__links"> Trophy Vault </a>    
+                </li>
+                <li class="navbar__btn">
+                    <a href="/home.html" class="button"> Your Account </a>    
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Muscle Diagram Section-->
+    <div class="diagram">
+        <div class="diagram_container"> 
+            <div class = "diagram_title">
+                <h1>Take a Peak into the Anatomy</h1>
+                <h2>Click on a major muscle group: </h2>
+            </div>
+        </div>
+
+                <div class="diagram_pic">
+                    <img src= "images/anatomydiag.png" class="humanBody" usemap="#musclemap">
+
+                    <map name ="musclemap">
+                        <area target="_self" class="chest_" alt ="chest" href="#chest" coords="130,142,112,156,117,187,157,185,202,185,205,154,186,142" shape="poly">
+                        
+                        <area target="_self" class="right_front_delt_" alt ="right front_delt" href="#front_delt" coords="115,133,85,149,98,174" shape="poly">
+                        <area target="_self" class="left_front_delt_" alt ="left front_delt" href="#front_delt" coords="212,136,230,140,235,171,217,166" shape="poly">
+                        
+                        <area target="_self" class="right_bicep_" alt ="right bicep" href="#bicep" coords="94,180,79,195,83,215,96,200"  shape="poly">
+                        <area target="_self" class="left_bicep_" alt ="left bicep" href="#bicep"  coords="229,181,240,198,240,213,226,202" shape="poly">
+                        
+                        <area target="_self" class="right_forearm_" alt ="right forearm" href="#forearm"  coords="77,225,65,240,57,300,65,300,94,244"  shape="poly">
+                        <area target="_self" class="left_forearm_" alt ="left forearm" href="#forearm" coords="241,226,256,238,265,298,256,300,230,243" shape="poly">
+                        
+                        <area target="_self" class="core_" alt ="core" href="#core" coords="160,191,121,215,118,269,160,309,202,273,198,215" shape="poly">
+                        
+                        <area target="_self" class="right_quadricep_" alt ="right quadricep" href="#quad" coords="117,292,103,348,116,410,141,413,146,351" shape="poly">
+                        <area target="_self" class="left_quadricep_" alt ="left quadricep" href="#quad" coords="202,293,215,336,208,408,180,411,172,362" shape="poly">
+                        
+                        <area target="_self" class="left_hamstring_" alt ="left hamstring" href="#hamstring" coords="427,328,470,358,460,424,434,432,427,383" shape="poly">
+                        <area target="_self" class="right_hamstring_" alt ="right hamstring" href="#hamstring" coords="517,339,489,351,499,425,528,424,532,331"  shape="poly">
+                        
+                        <area target="_self" class="left_calve_" alt ="left calve" href="#calve"  coords="445,433,429,457,432,505,456,503,462,466"  shape="poly">
+                        <area target="_self" class="right_calve" alt ="right calve" href="#calve" coords="513,430,501,447,496,491,513,508,529,494,527,446" shape="poly">
+                        
+                        <area target="_self" class="glutes_" alt ="glutes" href="#glute" coords="469,281,430,294,425,321,478,335,528,321,524,293,491,280" shape="poly">
+                        <area target="_self" class="erector_spinae_" alt ="erector spinae" href="#spinae" coords="478,208,453,263,478,273,504,264" shape="poly">
+                        
+                        <area target="_self" class="left_lat_" alt ="left lat" href="#lats" coords="429,186,457,187,469,205,450,256,440,234" shape="poly">
+                        <area target="_self" class="right_lat_" alt ="right lat" href="#lats" coords="502,184,491,204,508,251,516,230,526,192" shape="poly">
+                        <area target="_self" class="traps_" alt ="traps" href="#traps" coords="460,120,498,121,508,135,479,204,446,137"  shape="poly">
+                        
+                        <area target="_self" class="left_rotator_cuff_" alt ="left rotator cuff" href="#cuff" coords="441,142,423,161,429,180,454,174" shape="poly">
+                        <area target="_self" class="right_rotator_cuff_" alt ="right rotator cuff" href="#cuff" coords="514,140,531,153,529,183,503,178" shape="poly">
+                        
+                        <area target="_self" class="left_rear_delt_" alt ="left rear delt" href="#rear_delt" coords="406,174,406,160,428,139,419,162" shape="poly">
+                        <area target="_self" class="right_rear_delt_" alt ="right rear delt" href="#rear_delt" coords="527,137,548,156,541,170" shape="poly">
+                        
+                        <area target="_self" class="left_tricep_" alt ="left tricep" href="#tricep" coords="416,175,397,196,401,232,422,206"  shape="poly">
+                        <area target="_self" class="right_tricep_" alt ="right tricep" href="#tricep"   coords="539,176,557,195,558,226,547,227,536,203"  shape="poly">
+
+                    </map> 
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="Muscle_Text_Background">
+        <div class="Muscle_Text">
+            <div id="chest">
+                <br> <h1> The Muscles: </h1><br>
+                <br> <h2>The Chest</h2>
+                <p>The pectoralis major, commonly referred to as the chest muscle, is a prominent and robust muscle group situated at the front of the upper torso. Its fibers spread out in a radial pattern, contributing to its unique shape. This muscle is crucial for various daily actions such as pushing, lifting, and embracing. It functions by drawing the arms toward the midline of the body, playing a key role in movements like embracing someone affectionately.</p>
+                <a href="#" class="exerciseLink" data-muscle="chestDescription"> Chest Exercises: </a>        <!--hides the description until link is clinked. ALSO, data-muscle HAS to equal the below div ID so that it may hide the below description, and nothing else in Chest category.-->
+                <div id="chestDescription" class="exerciseDescription" style="display: none;">
+                    <p><br>Bench Press: This classic exercise for the chest can be performed using either a barbell or dumbbells. It works out the entire chest area and is fundamental in chest training routines. <br>
+                        <img src= "images/BenchPic.jpeg" class="trainingExamples">
+
+                       <br> Push-Ups: As a key bodyweight workout, push-ups effectively exercise the chest muscles. Adjusting the position of the hands can shift the focus to different parts of the chest. <br>
+                        <img src= "images/pushupDB.jpg" class="trainingExamples">
+
+                        <br>Incline Bench Press: This variation of the bench press involves an angled bench, concentrating on the upper chest, contributing to comprehensive chest muscle growth.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                        <br>Cable Crossovers: Executed on a cable machine, this exercise involves drawing cables across your body. It's particularly effective for stretching the chest, diversifying chest workout regimes. <br></p>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                </div>
+            </div>
+
+            <div id="front_delt">
+                <br><h2>The Front and Side Delts</h2>
+                <p>The anterior/front deltoids, situated at the front of your shoulders, play a key role in moving your arms forward and up, like when reaching for items. Conversely, the lateral/side deltoids on the shoulder's outer side help raise your arm sideways. These muscles' fortification enhances shoulder steadiness, motion range, and overall power. Such strength is crucial for various daily tasks that involve lifting and reaching, and it contributes to a balanced development of shoulder muscles.</p>        <a href="#" class="exerciseLink" data-muscle="frontdeltDescription">Front Delt Exercises: </a>
+                <div id="frontdeltDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Military Press (Overhead Press): Engage in this workout by lifting either dumbbells or a barbell above your head while in a standing position. It mainly works the front deltoids, contributing significantly to the development of shoulder strength and size.<br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/overheadpress.mp4" type="video/mp4">
+
+                        </video>
+                        <br>Front Raises: This targeted exercise involves raising dumbbells or a barbell straight ahead of you. It's focused on the anterior deltoid muscles and is effective both seated and standing.</p><br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/frontraise.mp4" type="video/mp4">
+
+                        </video>
+                </div>
+
+                <br> <a href="#" class="exerciseLink" data-muscle="sidedeltDescription">Side Delt Exercises: </a>
+                <div id="sidedeltDescription" class="exerciseDescription" style="display: none;">
+                    <p><br>Lateral Raises: This exercise entails lifting dumbbells or cables outward to your sides. It's an isolation workout focusing on the lateral deltoids, instrumental in broadening the shoulder area.<br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/sideraise.mp4" type="video/mp4">
+
+                        </video>
+                        <br>Cable Lateral Raises: Executed with a cable machine using either a single handle or rope attachment, this variation of lateral raises utilizes the consistent resistance of the cable, effectively concentrating on the side deltoids. <br></p>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                </div>
+            </div>
+
+            <div id="bicep">
+                <br><h2>The Biceps</h2>
+                <p>The biceps, or biceps brachii, are prominent muscles in the upper arm, known for contributing to a robust and sculpted appearance. Located at the front of the upper arm, these muscles operate in pairs and are primarily engaged when you bend your elbow, as seen in actions like lifting a grocery bag or performing bicep curls. Their primary function is to flex the forearm and draw the hand toward the shoulder. Strengthening the biceps not only improves the look of your arms but is also crucial for daily activities that require lifting or carrying.</p>
+                <a href="#" class="exerciseLink" data-muscle="bicepDescription">Bicep Exercises: </a>
+                <div id="bicepDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Barbell Bicep Curl: Engage in this exercise by gripping a barbell with an underhand hold and curling it upwards, keeping your upper arms stationary.<br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/bicepcurl.mp4" type="video/mp4">
+
+                        </video>
+                        <br>Dumbbell Hammer Curl: Perform this by holding dumbbells with your palms facing towards your body and curling them towards your shoulders.<br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/hammercurl.mp4" type="video/mp4">
+
+                        </video>
+                        <br>Preacher Curl: This involves using an E-Z curl bar and a preacher bench, allowing you to curl while comfortably resting your upper arms on the bench's pad.<br></p>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                </div>
+
+            </div>
+
+            <div id="forearm">
+                <br><h2>The Forearms</h2>
+                <p>The forearms, located between the elbow and wrist, comprise multiple small muscles that collectively enable wrist flexion and extension. These muscles are vital for everyday activities like typing, gripping, and aiding elbow flexion. They also regulate precise finger movements, essential for tasks requiring fine motor skills and strength, such as playing instruments or cooking. Forearm strengthening enhances grip strength and hand coordination, facilitating daily functions and specialized tasks more effectively.</p>
+                <a href="#" class="exerciseLink" data-muscle="forearmDescription">Forearm Exercises: </a>
+                <div id="forearmDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Wrist Curls: This exercise focuses on flexing the wrist to lift a weight, effectively working the forearm flexor muscles, enhancing wrist strength and stamina.<br>
+                    <img src= "images/locked.png" class="trainingExamples">
+
+                    <br>Reverse Curls: By curling a barbell upwards with an overhand grip, reverse curls specifically target the brachioradialis in the forearm, strengthening the upper part of the forearm.<br>
+                    <img src= "images/locked.png" class="trainingExamples">
+    
+                    <br>Farmer's Walks: Involving the carrying of heavy weights in each hand while walking, this exercise tests grip strength and activates the forearm muscles responsible for grip.<br>
+                    <img src= "images/locked.png" class="trainingExamples">
+     
+                    <br>Dead Hangs: Performed by hanging from a bar with extended arms, dead hangs engage forearm muscles for grip maintenance, boosting endurance for activities like rock climbing.<br></p>
+                    <video class = "trainingExamples" controls>
+                        <source src= "videos/deadhang.mp4" type="video/mp4">
+
+                    </video>
+                </div>
+
+            </div>
+
+            <div id="core">
+                <br><h2>The Core</h2>
+                <p>The core muscles, located around the midsection, include the rectus abdominis, transverse abdominis, and obliques. These key muscles act as a central support for the body, engaging in various movements and stability functions. The rectus abdominis, known for creating the 'six-pack' appearance, aids in flexing the spine and stabilizing the torso. Meanwhile, the transverse abdominis functions similarly to a natural corset, reinforcing spinal stability and aiding in maintaining proper posture.
+
+                    The obliques, encompassing both internal and external obliques, are situated along the sides of the torso. They play a crucial role in enabling the rotation and side bending of the trunk, facilitating body twists and balance in diverse activities. A robust and well-maintained core is fundamental for correct posture, equilibrium, and stability in daily actions like bending, twisting, and lifting. It's also vital in sports for agility and rotational movements. Engaging in core-strengthening exercises, such as planks and Russian twists, is key to maintaining the strength and functionality of these muscles, contributing significantly to overall physical health.</p>
+                <a href="#" class="exerciseLink" data-muscle="coreDescription">Core Exercises: </a>
+                <div id="coreDescription" class="exerciseDescription" style="display: none;">
+
+                    <p> <br>Crunches primarily target the "six-pack" rectus abdominis muscles. To perform, lie on your back, bend your knees, place hands behind your head, and lift your upper body towards your knees. <br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                        <br>Planks activate the transverse abdominis, essential for spinal support. Maintain a push-up posture, aligning your body straight, resting on your forearms and toes.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+  
+                        <br>Russian Twists work on the oblique muscles. Sit with bent knees, feet raised, and rotate your torso, holding a weight, touching the ground on each side.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+ 
+                        <br>Hanging Leg Raises focus on the lower abs. Hang with your arms from a bar, raise your legs without touching the ground, and lower back down.<br></p>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/legraise.mp4" type="video/mp4">
+
+                        </video>
+                 </div>
+
+            </div>
+
+            <div id="quad">
+                <br><h2>The Quads</h2>
+                <p>The quadriceps, commonly referred to as quads, are the primary muscles on the front part of the thigh. They play a key role in extending the knee and straightening the leg. Engaged in activities like rising from a seated position, stair climbing, or kicking, these powerful muscles are essential for movements involving the legs. Maintaining strength and flexibility in the quadriceps is beneficial for daily tasks and improves performance in activities such as running, cycling, and jumping.</p>
+                <a href="#" class="exerciseLink" data-muscle="quadDescription">Quadricep Exercises: </a>
+                <div id="quadDescription" class="exerciseDescription" style="display: none;">
+
+                    <p> <br>Squats: An excellent exercise for quadriceps, squats involve standing with feet shoulder-width apart, bending the knees and hips to lower the body, and then rising to stand.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                    <br>Lunges: Focused on the quads and additional leg muscles, lunges may involve a forward step followed by bending both knees until they form right angles, alternating between legs.<br>
+                    <video class = "trainingExamples" controls>
+                        <source src= "videos/lunge.mp4" type="video/mp4">
+
+                    </video>  
+                    <br>Leg Press: Tailored for the quads, the leg press machine involves sitting and pushing weight by extending the knees, then returning to the initial position.<br></p>
+                    <img src= "images/locked.png" class="trainingExamples">
+
+                </div>
+
+            </div>
+
+            <div id="hamstring">
+                <br><h2>The Hamstrings</h2>
+                <p>The hamstrings, located at the back of the thigh, are essential for bending the knee and hip extension. These muscles are engaged during activities like walking, running, and climbing, and they regulate the pace of leg movements. Strengthening the hamstrings enhances not just athletic prowess but also daily actions such as standing up and walking with ease.</p>
+                <a href="#" class="exerciseLink" data-muscle="hamstringDescription">Hamstring Exercises: </a>
+                <div id="hamstringDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Deadlifts effectively engage the hamstrings and other muscles. Begin by standing near a barbell with feet hip-width apart, bend your hips and knees to reach the barbell, then lift it by straightening your hips and knees.<br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/deadlifting.mp4" type="video/mp4">
+
+                        </video>
+
+                        <br>Leg Curls focus on the hamstrings and can be performed using a machine or resistance bands. For this exercise, either lie on a leg curl machine or set up with a resistance band, then curl your legs towards your glutes against the resistance before returning to the start position.<br></p>
+                        
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/legcurl.mp4" type="video/mp4">
+                        </video>
+                </div>
+
+            </div>
+
+            <div id="calve">
+                <br><h2>The Calves</h2>
+                <p>The calf muscles, situated at the lower leg's rear, are essential for aiding in ground lift-off during activities like walking and sprinting. These muscles are crucial for motion-based tasks and lifting the body, as well as playing a key role in balance and stability. Enhanced calf muscle strength can lead to improved leg power and more effortless performance of daily activities.</p>
+                <a href="#" class="exerciseLink" data-muscle="calveDescription">Calf Exercises: </a>
+                <div id="calveDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Calf Raises focus on enhancing the calf muscles. Stand on your toes, then elevate your heels as high as possible and lower them. This exercise boosts calf muscle strength and definition. <br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/calfraises.mp4" type="video/mp4">
+
+                        </video>
+                        <br>Sprinting, a vigorous cardio workout, involves fast-paced running over short distances. It enhances cardiovascular health, muscle endurance, and power. Sprinting works various muscles, including legs, core, and upper body, for a comprehensive workout. It's effective for weight management, metabolic enhancement, and athletic skill improvement, also rapidly elevating heart rate and calorie burn.<br></p>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                 </div>
+
+            </div>
+
+            <div id="glute">
+                <br> <h2>The Gluteus</h2>
+                <p>The gluteus muscles, located in the buttocks, are pivotal in various movements including standing, walking, running, and sitting. They extend the hip joint and assist in rotating the thigh outward. Glutes are crucial for upright posture, pelvic stability, and power generation in activities like stair climbing and sprinting. Strengthening them boosts lower body strength and overall physical prowess.</p>
+                <a href="#" class="exerciseLink" data-muscle="gluteDescription">Glute Exercises: </a>
+                <div id="gluteDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Squats effectively target the lower body, engaging quadriceps, hamstrings, glutes, and lower back. The technique involves a shoulder-width stance, core engagement, and lowering the body by bending knees and hips, maintaining a straight back and upright chest. The movement descends until thighs are parallel to the ground, then pushes up through the heels.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                        <br>Lunges, excellent for the lower body, work the quadriceps, hamstrings, glutes, and calves. Starting with feet hip-width apart, step forward and bend knees to 90 degrees, keeping the front knee above the ankle and the back knee just off the ground. Maintain an upright chest and engage the core for balance. Push back up through the front heel, alternating legs. Lunges enhance strength, stability, and balance.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                    </p>
+                </div>
+            </div>
+
+            <div id="spinae">
+                <br><h2>The Erector Spinae</h2>
+                <p>The erector spinae, a muscle group along the spine from the neck to lower back, supports upright posture and spinal curvature. They assist in standing, sitting, and movements like back bending and trunk rotation. Strengthening and maintaining flexibility in these muscles is vital for back health and proper posture in daily life.</p>
+                <a href="#" class="exerciseLink" data-muscle="spinaeDescription">Low back Exercises: </a>
+                <div id="spinaeDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Back Extensions are performed using a bench or stability ball. Secure your feet, cross your arms over your chest or behind your head, and lower your upper body by bending at the waist. Keep a straight line from head to hips. Lift back up to a neutral stance. This workout strengthens the erector spinae muscles, enhancing lower back stability.<br></p>
+                    <img src= "images/locked.png" class="trainingExamples">
+
+                </div>
+
+            </div>
+
+            <div id="lats">
+                <br><h2>The Lats</h2>
+                <p>The latissimus dorsi, known as lats, are expansive muscles extending from the upper back sides to the lower spine. They are essential for pulling, lifting, and reaching movements. Lats are engaged in activities like rowing or pulling objects closer. Strengthening these muscles enhances upper body strength and aids in various actions, such as lifting or door opening. Additionally, well-developed lats contribute to a V-shaped torso appearance.</p>
+                <a href="#" class="exerciseLink" data-muscle="latsDescription">Lat Exercises: </a>
+                <div id="latsDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Lat pulldowns: Lat pulldowns are an effective exercise for targeting the latissimus dorsi muscles. To perform them, sit at a lat pulldown machine, grasp the bar wider than shoulder-width apart, and pull it down to your chest while keeping your back straight and chest up. Slowly release the bar to the starting position, allowing your lats to stretch. This exercise helps build a strong and well-defined back.<br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/latpulldown.mp4" type="video/mp4">
+
+                        </video>
+                        <br>Pull-Ups engage the lats and other upper body muscles. Hang from a bar with palms outward, pull up until your chest nears the bar, then lower with control. They're great for upper body and lats development. Bent-Over Rows, a compound exercise, work the lats and upper back muscles. Stand, bend knees, lean forward, and lift a barbell or dumbbells to your lower ribcage, then lower. They enhance lat strength and back shape.<br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/pullups.mp4" type="video/mp4">
+
+                        </video>
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="traps">
+                <br><h2>The Traps</h2>
+                <p>The trapezius muscles, or traps, are large, triangular muscles spanning the upper back and neck. They facilitate shoulder lifting, neck rotation, and head tilting, like when shrugging or lifting heavy items. Strengthening these muscles enhances shoulder stability and posture, aiding in daily tasks such as carrying or sitting or even wearing a bookbag. Developed traps also enhance the upper body's strong, confident look.</p>
+                <a href="#" class="exerciseLink" data-muscle="trapsDescription">Trap Exercises: </a>
+                <div id="trapsDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>Shrugs, a straightforward and effective exercise for the traps, are performed by standing with feet apart, holding weights in front of the thighs, palms inward. Raise the shoulders high, keeping arms straight, then hold briefly at the top to engage the traps before lowering. This exercise focuses on the trapezius muscles, aiding in enhancing shoulder stability and posture.<br></p>
+                    <video class = "trainingExamples" controls>
+                        <source src= "videos/shrug.mp4" type="video/mp4">
+
+                    </video>
+                </div>
+
+            </div>
+
+            <div id="cuff">
+                <br><h2>The Rotator Cuff</h2>
+                <p>The rotator cuff consists of four key muscles around the shoulder joint: supraspinatus, infraspinatus, teres minor, and subscapularis. They act as a stabilizing sleeve for the shoulder, enabling various arm lifting and rotating movements. These muscles play a vital role in daily tasks like lifting, raising your arms overhead, and reaching. It can help with daily tasks that require shoulder mobility. Strengthening the rotator cuff is crucial for preventing injuries and ensuring smooth, pain-free shoulder functions.</p>
+                <a href="#" class="exerciseLink" data-muscle="cuffDescription">Rotator Cuff Exercises: </a>
+                <div id="cuffDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>External Rotations involve holding a dumbbell with the elbow bent at 90 degrees, rotating the forearm outward while keeping the elbow against the body, focusing on rotator cuff muscles and shoulder stability.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                        <br>Face Pulls, using a rope on a cable machine at head height, involve pulling towards the face with elbows leading and ending with a shoulder blade squeeze, strengthening the rear deltoids, upper back, and rotator cuff, beneficial for shoulder health and posture.<br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="rear_delt">
+                <br> <h2>The Rear Delts</h2>
+                <p>The rear deltoid muscles at the back of the shoulders are essential for arm retraction and shoulder extension. They activate during actions like pulling open doors or pulling your arm behind you. Strengthening rear delts enhances shoulder stability, posture, and upper body strength. They also contribute to a balanced, defined shoulder look.</p>
+                <a href="#" class="exerciseLink" data-muscle="reardeltDescription">Rear Delt Exercises: </a>
+                <div id="reardeltDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>For Bent Over Dumbbell Reverse Flyes, start by holding dumbbells with palms facing inwards. Bend at the knees and hips, leaning forward. Lift the dumbbells sideways to shoulder height, focusing on engaging the rear deltoids, then return to the start. This exercise effectively targets the rear shoulder muscles.<br></p>
+                    <img src= "images/locked.png" class="trainingExamples">
+
+                </div>
+
+            </div>
+
+            <div id="tricep">
+                <br><h2>The Triceps</h2>
+                <p>The triceps brachii, or simply triceps, are positioned at the back of the upper arm. They play a crucial role in extending the elbow joint, which is key in movements like pushing or lifting. Activities, including making your bed and hammering a nail, rely on these muscles. Enhanced triceps strength not only boosts upper body capabilities but also aids in more efficient functional movements.</p>
+                <a href="#" class="exerciseLink" data-muscle="tricepDescription">Tricep Exercises: </a>
+                <div id="tricepDescription" class="exerciseDescription" style="display: none;">
+
+                    <p><br>For Tricep Dips, position your hands on bars or a sturdy edge, arms straight, then bend elbows to lower your body and straighten to lift. <br>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/dips.mp4" type="video/mp4">
+
+                        </video>
+                        <br>In Tricep Pushdowns, use a rope on a cable machine, pushing down from elbows, keeping them close to your body. <br>
+                        <img src= "images/locked.png" class="trainingExamples">
+
+                        <br>Skull Crushers involve lying down, lowering a weight from above your chest to near your forehead, then raising it back. Each exercise specifically strengthens the triceps, crucial for upper arm toning and functional arm movements.<br></p>
+                        <video class = "trainingExamples" controls>
+                            <source src= "videos/skullcrusher.mp4" type="video/mp4">
+
+                        </video>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer Section -->
+        <div class="footer__container">
+            <div class="footer__links">
+                <div class="footer__link--wrapper">
+                    <div class="footer__link--items">
+                        <h2>About Us</h2>
+                        <a href="/home.html">How it works</a>
+                        <a href="/home.html">Founded</a>
+                        <a href="/home.html">Terms of Service</a>
+                    </div>
+                    <div class="footer__link--items">
+                        <h2>Sources</h2>
+                        <a href="/home.html">New research</a>
+                        <a href="/home.html">Fitness resources</a>
+                    </div>
+                </div>
+                <div class="footer__link--wrapper">
+                    <div class="footer__link--items">
+                        <h2>Data</h2>
+                        <a href="/home.html">Motivational Quotes Log</a>     <!--for past motivational quotes and current-->
+                        <a href="/home.html">Recent User ratings</a>
+                    </div>
+                    <div class="footer__link--items">
+                        <h2>Social Media</h2>
+                        <a href="/home.html">Instagram</a>
+                        <a href="/home.html">Facebook</a>
+                        <a href="/home.html">Youtube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social__media">
+                <div class="social__media--wrap">
+                    <div class="footer__logo">
+                        <a href="/home.html" id="footer__logo"><i class="fa-solid fa-dumbbell"></i>VIGOROMETRY</a>
+                    </div>
+                    <p class="website__rights">VIGOROMETRY 2024. Private Project</p>    
+                    <div class="social__icons">
+                        <a href="/home.html" class="social__icon--link" target="_blank"> <!--you can now open link in a new browser tab or window. Also the logo pic is also the link-->
+                            <i class="fab fa-facebook"></i>     
+                        </a>
+                        <a href="/home.html" class="social__icon--link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="/home.html" class="social__icon--link" target="_blank"> <!--you can now open link in a new browser tab-->
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    
+    <script src="home.js"></script>      <!--links javascript file-->
+    <script src="AnatomyAcademy.js"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+* {
+    box-sizing: border-box;
+    margin: 0;          /*External border*/
+    padding: 0;         /*Internal border*/
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar {                       /*The background*/
+    background: #000000;
+    height: 80px;
+    width: 100%;
+    display: flex;          /*centers content*/
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;       /*keeps black box to top of visual user screen no matter how down you scroll*/
+    top: 0;
+    z-index: 999;           /*elements with a larger z-index are displayed over things that have lower z-index. 999 'ensures' that navigation bar layers over everything.*/
+}
+
+.navbar__container {        /*the body of hyperlinks. the container of navbar box */
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar__logo{                      /*The logo vigorometry */
+    background-color: #ff8177;
+    background-image: linear-gradient(to bottom, #ff0040 0%, #ffb8bd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.fa-dumbbell {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu{      /*takes the hyperlinks to the center*/
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {        /*seperates each link by some white spaces*/
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {      /*for a button in navbar*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {           /*creates a button box around "sign up" link */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover {    /*hover over sign up button and box turns blue*/     
+    background: #4837ff;
+    transition: all 0.5s ease;
+}
+
+.navbar__links:hover {      /*hover over links and they turn red*/
+    color: #ff1313;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 960px) {  /*allows us to slide menu down to view*/
+    /*This is a media query for screens smaller than 960px. It modifies several of the above styles to make the navbar responsive to smaller screens, like hiding the menu until toggled and changing layout to a vertical grid.*/
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+
+    }
+
+    .navbar__menu.active {      /*The black background of the slide-down action*/
+        background: #000000;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {          /*Everything here is just how the menu would look on a small phone screen, after you hit toggle button*/
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar{       /*it's the three row horizontaal lines that allows you to surf through stuff*/ 
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {  /*allows animation of the toggle horizontal lines menu icon to turn into an X button*/
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/*Muscle Diagram section*/
+
+
+.diagram_container {        /*Take Peak header text*/
+    display: grid;
+    background-image: linear-gradient(to top, #e07b7b 1%, #000000 20%);
+    height: 300px;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.diagram_pic {
+    display: flex;
+    justify-content: center;
+}
+
+
+.diagram_title {
+    background-image: linear-gradient(to top, #ff81a1 15%, #486cff 100%);
+    font-size: 30px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Muscle_Text_Background {
+    background-image: linear-gradient(to top, #000000 99.2%, #ffffff 100%);
+}
+
+.Muscle_Text {
+    /*takes the hyperlinks to the center*/
+    font-size: 2rem;
+    text-align: center;
+    color: #ffc5c5;    
+}
+
+.Muscle_Text h1 {   /*"The Muscles"*/
+    font-size: 8rem;
+    background-image: linear-gradient(to top, #ff5975 0%, #523df1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;       /*allows to blur in the color in the text
+    -moz-text-fill-color: transparent;*/
+}
+
+.Muscle_Text h2 {   /*"The Muscles"*/
+    font-size: 5rem;
+    background-image: linear-gradient(to top, #dad4ff 0%,#cf0022  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;       /*allows to blur in the color in the text
+    -moz-text-fill-color: transparent;*/
+}
+
+.Muscle_Text a{   /*"The Muscles"*/
+    color:#dad4ff;
+    text-decoration: none;
+
+}
+
+.Muscle_Text a:hover {
+    color:#4837ff;
+    font-size: 34px;
+    transition: 0.1s ease-in-out;
+    text-decoration-line: underline;
+}
+
+.exerciseDescription {
+    margin: 1rem;
+    background-size: cover;
+    color: #cec0ff;
+    
+}
+
+.trainingExamples {     /*The videos of exercise demonstration*/
+    margin: 2rem;
+    width: 500px;
+    height: auto;
+}
+
+
+
+/* Mobile Responsive part.*/
+@media screen and (max-width: 768px) {
+/*      //messes up the image mapping even if on a half screen PC. Must leave out to make sure image mapping functions.
+    .diagram_pic {
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem;
+        width: 550px;
+        height: 550px;
+
+    }
+*/
+    .diagram_title {
+        text-align: center;     /*aligns the text of 'content' to center when on mobile size screen*/
+        margin-bottom: 4rem;
+    }
+
+    .Muscle_Text {
+        font-size: 1.5rem;
+    }
+
+    .Muscle_Text h1 {
+        font-size: 3.5rem;
+        margin-top: 4rem;
+    }
+
+    .Muscle_Text h2 {
+        font-size: 2.5rem;
+    }
+
+    .Muscle_Text a {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+
+    }
+
+    .Muscle_Text a:hover {
+        font-size: 26px;
+    }
+
+    .trainingExamples {
+        width: 350px;
+
+    }
+
+}
+
+@media screen and (max-width: 480px) {  /* for even smaller screens*/
+
+
+    .diagram_title {
+        text-align: center;     /*aligns the text of 'content' to center when on mobile size screen*/
+        margin-bottom: 2.5rem;
+    }
+
+    .Muscle_Text {
+        margin: 0.7rem;
+        font-size: 1rem;
+    }
+
+    .Muscle_Text h1 {
+        font-size: 2.25rem;
+        margin-top: 2.5rem;
+    }
+
+    .Muscle_Text h2 {
+        font-size: 1.5rem;
+    }
+
+    .Muscle_Text a {
+        margin-top: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .Muscle_Text a:hover {
+        font-size: 18px;
+    }
+
+    .trainingExamples {
+        width: 250px;
+
+    }
+}
+
+
+
+
+
+/* Footer CSS */
+.footer__container {
+    background-color: #131313;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer__logo {
+    color: #fff;
+    text-decoration: none;  /*Gets rid of underline in hyperlink*/
+    font-size: 2rem;
+}
+
+.footer__links {
+    display: flex;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    width: 160px;
+}
+
+
+.footer__link--items > h2 {
+    color: #fff;
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+    color: #7e7e7e; /*hover color change over items in footer*/
+    transition: 0.16s ease-out;
+}
+
+
+/*Social Icons*/
+.social__icon--link {
+    color: #6973fc;
+    font-size: 24px;
+}
+
+
+.social__media {
+    width: 100%;
+}
+
+.social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+.social__logo {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.website__rights {
+    color: #fff;
+}
+
+@media screen and (max-width: 820px) {
+    .footer__links {
+        padding-top: 2rem;
+    }
+
+    #footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .website__rights {
+        margin-bottom: 2rem;
+    }
+
+    .footer__link--wrapper {
+        flex-direction: column;
+    }
+
+    .social__media--wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__link--items {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
